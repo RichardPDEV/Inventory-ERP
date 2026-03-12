@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS suppliers (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(120) NOT NULL UNIQUE,
+  contact_email VARCHAR(255),
+  contact_phone VARCHAR(50)
+);
