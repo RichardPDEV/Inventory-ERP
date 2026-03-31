@@ -26,6 +26,10 @@ public class Product {
     @Column(name = "stock", nullable = false)
     private Integer stock = 0;
 
+    @Version
+    @Column(name = "version", nullable = false)
+    private Long version = 0L;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
@@ -41,6 +45,7 @@ public class Product {
     public String getSku() { return sku; }
     public BigDecimal getPrice() { return price; }
     public Integer getStock() { return stock; }
+    public Long getVersion() { return version; }
     public Category getCategory() { return category; }
     public Supplier getSupplier() { return supplier; }
 
